@@ -1,0 +1,50 @@
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+  margin:0;
+}
+header{
+  height: 48px;
+  display: flex;
+  align-items: center;
+  background: #20232a;
+  color: #FFFFFF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header .flex-filler{
+  flex-grow: 1;
+}
+header .mark-github{
+  height: 24px;
+  fill:#FFFFFF;
+  margin: 0 1.5rem;
+}
+header .logo-text{
+  font-weight: normal;
+  margin: 0 1.5rem;
+  font-size: 18px;
+}
+.hero{
+  height: 100vh;
+  background: #353535;
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  align-items: center;
+  justify-content: center;
+}
+.heroCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variant: petite-caps;
+}
+.heroCenter *{
+  text-align: end;
+  padding: 8px 16px;
+}
+.right-border{
+  border-right: 0.05em solid #FFFFFF;
+}
