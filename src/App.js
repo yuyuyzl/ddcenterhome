@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from './ddc3.png'
 import './App.css';
+import VMoeLogs from './VMoeLogs';
 
 function App() {
     return (
         <div className="App">
             <Nav/>
             <Hero/>
+            <div>123<br/>123<br/>123<br/>123<br/>123<br/>123<br/>123<br/>123<br/></div>
         </div>
     );
 }
@@ -35,6 +37,10 @@ class Hero extends React.Component {
                 <div className="heroCenter">
                     <h1 className="right-border">DD CENTER</h1>
                     <h2>Monitor. Analyze. Optimize.</h2>
+                </div>
+                <div className="heroBackground">
+                    <VMoeLogs style={{marginBottom:"300px"}}/>
+
                 </div>
             </div>
         )
