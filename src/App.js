@@ -8,8 +8,6 @@ function App() {
         <div className="App">
             <Nav/>
             <Hero/>
-            <main>
-            </main>
         </div>
     );
 }
