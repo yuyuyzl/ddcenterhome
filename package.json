@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "echarts": "^4.4.0",
+    "echarts-for-react": "^2.0.15-beta.1",
+    "pako": "^1.0.10",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-router": "^5.1.2",

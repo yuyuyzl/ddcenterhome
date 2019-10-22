@@ -2,16 +2,20 @@ h1,h2,h3,h4,h5,h6{
   font-weight: normal;
   margin:0;
 }
+.App{
+  background: #FFF;
+}
 header{
   height: 48px;
   display: flex;
   align-items: center;
   background: #20232a;
   color: #FFFFFF;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
 }
 header .flex-filler{
   flex-grow: 1;
@@ -27,8 +31,17 @@ header .logo-text{
   font-size: 18px;
 }
 .hero{
+  position: relative;
   height: 100vh;
   color: #FFFFFF;
+  background: #000;
+  z-index: 0;
+}
+main{
+  position: relative;
+  z-index: 1;
+  background: #FFF;
+  height: 100vh;
 }
 .heroCenter{
   position: absolute;
@@ -42,6 +55,16 @@ header .logo-text{
   align-items: center;
   justify-content: center;
   font-variant: petite-caps;
+  transition: background-color 2s,filter 2s,transform 2s;
+  pointer-events: none;
+}
+.heroCenterText{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-variant: petite-caps;
+  transition: background-color 2s,filter 2s,transform 2s;
+  pointer-events: none;
 }
 .heroCenter *{
   text-align: end;
@@ -53,7 +76,7 @@ header .logo-text{
 
 .heroBackground{
   background: #000;
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   z-index: -2;
@@ -62,4 +85,36 @@ header .logo-text{
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  filter:blur(2px);
+  animation-name: fadeIn; /*动画名称*/
+  animation-duration: 3s; /*动画持续时间*/
+  animation-iteration-count: 1; /*动画次数*/
+  animation-delay: 0s;
+  transition: filter 2s;
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /*初始状态 透明度为0*/
+  }
+  50% {
+    opacity: 0; /*中间状态 透明度为0*/
+  }
+  100% {
+    opacity: 1; /*结尾状态 透明度为1*/
+  }
+}
+
+.hero:hover .heroBackground{
+  filter: none;
+  transition-delay: 0.3s;
+}
+.hero:hover .heroCenter{
+  background: transparent;
+  filter:blur(4px);
+  transition-delay: 0.3s;
+}
+.hero:hover .heroCenterText{
+   transform: scale(1.01);
+   transition-delay: 0.3s;
+ }

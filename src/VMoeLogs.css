@@ -1,26 +1,27 @@
 .logs-root{
     display: flex;
-    max-width: 50vw;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
-    align-content: stretch;
+    align-items: flex-start;
+    align-content: center;
 }
 
 .spider{
     margin: 0.5em;
     padding: 0.3em;
     width: 8vw;
+    height: 100px;
     overflow: hidden;
     transition: width 0.5s,height 0.5s,transform 0.5s;
+    animation: show 1s,darken 2s;
 }
 .spider h4{
-    animation: myfirst 0.3s,darken 1s,dark 2s;
+    animation: show 0.3s,darken 1s,dark 2s;
     opacity: 0.7;
     font-size: small;
 }
 .spider h5{
-     animation: myfirst 0.3s,darken 1s;
+     animation: show 0.3s,darken 1s;
      opacity: 1;
  }
 

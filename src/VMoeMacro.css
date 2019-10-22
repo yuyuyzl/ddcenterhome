@@ -1,0 +1,39 @@
+.macro-root{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+
+}
+
+.macro-container{
+    position: relative;
+    margin: 32px 0;
+    width: 100%;
+    height: 100%;
+}
+
+.circle{
+    position: absolute;
+    border-width: 2px;
+    border-color: #FFFFFF;
+    opacity: 0.4;
+    border-style: solid;
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+    z-index: -3;
+
+}
+.circle.main{
+    border-width: 3px;
+    border-color: #78ddff;
+    z-index: -2;
+    opacity: 1;
+}
+
+
+

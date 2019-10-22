@@ -13,6 +13,12 @@ class VMoeLogs extends React.Component {
                 let state={};
                 state[log[0].toLocaleUpperCase()]=log[1].match(/ - (.*)/).pop();
                 this.setState(state);
+                setTimeout(()=>{
+                    if(this.state[log[0].toLocaleUpperCase()]===log[1].match(/ - (.*)/).pop())this.setState((state,props)=>{
+                        delete state[log[0].toLocaleUpperCase()];
+                        return state;
+                    })
+                },10000);
             }
 
         });
@@ -28,7 +34,7 @@ class VMoeLogs extends React.Component {
 
     render() {
         const spiders=Object.keys(this.state).sort().map((spiderName)=>
-            <SpiderLog key={spiderName+this.state[spiderName]} name={spiderName} log={this.state[spiderName]}/>
+            <SpiderLog key={spiderName} name={spiderName} log={this.state[spiderName]}/>
         );
         return (
             <div className="logs-root" style={this.props.style}>
@@ -42,7 +48,7 @@ function SpiderLog(props){
     return(
         <div className="spider">
             <h5>{props.name}</h5>
-            <h4>{props.log}</h4>
+            <h4 key={props.log}>{props.log}</h4>
         </div>
     )
 }
