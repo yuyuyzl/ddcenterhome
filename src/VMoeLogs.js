@@ -1,11 +1,11 @@
 import React from "react";
-import io from "socket.io-client";
+import socket from "./socket";
 import "./VMoeLogs.css"
 
 class VMoeLogs extends React.Component {
     constructor(...args){
         super(...args);
-        this.socket=io("http://api.vtbs.moe");
+        this.socket=socket;
         this.socket.on("log",(log)=>{
             log=log.split(": UPDATED:");
             if(log.length>=2){
@@ -25,11 +25,11 @@ class VMoeLogs extends React.Component {
         this.state={};
     }
     componentDidMount() {
-        this.socket.connect();
+        // this.socket.connect();
     }
 
     componentWillUnmount() {
-        this.socket.disconnect();
+        // this.socket.disconnect();
     }
 
     render() {
