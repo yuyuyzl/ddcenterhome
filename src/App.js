@@ -31,11 +31,21 @@ function Nav() {
 }
 
 class Hero extends React.Component {
+    constructor(...args){
+        super(...args);
+        this.state={canHover:true};
+    }
+    componentDidMount() {
+        this.setState({canHover:window.scrollY<=32});
+        window.onscroll=()=>{
+            this.setState({canHover:window.scrollY<=32});
+        }
+    }
 
     render() {
 
         return (
-            <div className="hero">
+            <div className={"hero "+(this.state.canHover?"canhover":"")}>
                 <div className="heroCenter">
                     <div className="heroCenterText">
                         <h1 className="right-border">DD CENTER</h1>

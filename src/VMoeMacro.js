@@ -37,7 +37,7 @@ class VMoeMacro extends React.Component {
             this.socket.emit('vtbMacroWeekCompressed', undefined, (data) => {
                 data = JSON.parse(new TextDecoder().decode(pako.inflate(data))).value;
                 let dataSplitted = [];
-                const today0600 = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 6);
+                const today0600 = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()-(new Date().getHours()<6?1:0), 6);
                 for (let line of data) {
                     let i = 0;
                     while (today0600 - i * 24 * 60 * 60 * 1000 > line[2]) i++;

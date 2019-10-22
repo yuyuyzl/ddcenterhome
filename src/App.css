@@ -55,16 +55,16 @@ main{
   align-items: center;
   justify-content: center;
   font-variant: petite-caps;
-  transition: background-color 2s,filter 2s,transform 2s;
-  pointer-events: none;
+  transition: background-color 1s,filter 1s,transform 1s;
 }
 .heroCenterText{
   display: flex;
   align-items: center;
   justify-content: center;
   font-variant: petite-caps;
-  transition: background-color 2s,filter 2s,transform 2s;
+  transition: background-color 1s,filter 1s,transform 1s,text-shadow 1s;
   pointer-events: none;
+  text-shadow: 0 0 20px black, 0 0 20px black;
 }
 .heroCenter *{
   text-align: end;
@@ -91,7 +91,7 @@ main{
   animation-duration: 3s; /*动画持续时间*/
   animation-iteration-count: 1; /*动画次数*/
   animation-delay: 0s;
-  transition: filter 2s;
+  transition: filter 1s;
 }
 @keyframes fadeIn {
   0% {
@@ -105,16 +105,21 @@ main{
   }
 }
 
-.hero:hover .heroBackground{
+.canhover .heroCenter{
+  pointer-events: none;
+}
+
+.canhover:hover .heroBackground{
   filter: none;
   transition-delay: 0.3s;
 }
-.hero:hover .heroCenter{
+.canhover:hover .heroCenter{
   background: transparent;
   filter:blur(4px);
   transition-delay: 0.3s;
 }
-.hero:hover .heroCenterText{
+.canhover:hover .heroCenterText{
    transform: scale(1.01);
+  text-shadow: none;
    transition-delay: 0.3s;
  }
