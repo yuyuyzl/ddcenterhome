@@ -37,12 +37,16 @@ class VMoeMacro extends React.Component {
             this.socket.emit('vtbMacroWeekCompressed', undefined, (data) => {
                 data = JSON.parse(new TextDecoder().decode(pako.inflate(data))).value;
                 let dataSplitted = [];
-                const today0600 = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()-(new Date().getHours()<6?1:0), 6);
+                const today0600 = Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 22);
                 for (let line of data) {
                     let i = 0;
                     while (today0600 - i * 24 * 60 * 60 * 1000 > line[2]) i++;
                     if (dataSplitted[i]) dataSplitted[i].push(line); else dataSplitted[i] = [line];
                 }
+                dataSplitted=dataSplitted.filter(function (el) {
+                    return el != null;
+                });
+                console.log(dataSplitted);
                 dataSplitted = dataSplitted.map((data, i) => {
                     return {
                         data: data.map(line => [new Date(Math.round(line[2]/300000)*300000).Format("hh:mm"), line[1]]),
@@ -75,7 +79,7 @@ class VMoeMacro extends React.Component {
                 let xaxdata = [];
                 for (let hh = 0; hh < 24; hh++) {
                     for (let mm = 0; mm < 60; mm+=5) {
-                        xaxdata.push(("0" + (hh + 6) % 24).substr(-2) + ":" + ("0" + (mm)).substr(-2));
+                        xaxdata.push(("0" + (hh + new Date(today0600).getHours()) % 24).substr(-2) + ":" + ("0" + (mm)).substr(-2));
                     }
                 }
                 console.log(dataSplitted);
