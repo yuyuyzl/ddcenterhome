@@ -97,7 +97,7 @@ class VMoeMacro extends React.Component {
                     grid:{
                         left: "0",
                         right:"0",
-                        top:0,
+                        top:32,
                         bottom:60,
                     },
                     tooltip: {
