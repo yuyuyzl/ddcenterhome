@@ -40,7 +40,7 @@ class VMoeMacro extends React.Component {
                 const today0600 = Date.UTC(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 22);
                 for (let line of data) {
                     let i = 0;
-                    while (today0600 - i * 24 * 60 * 60 * 1000 > line[2]) i++;
+                    while (today0600 - i * 24 * 60 * 60 * 1000 > Math.round(line[2]/300000)*300000) i++;
                     if (dataSplitted[i]) dataSplitted[i].push(line); else dataSplitted[i] = [line];
                 }
                 dataSplitted=dataSplitted.filter(function (el) {
