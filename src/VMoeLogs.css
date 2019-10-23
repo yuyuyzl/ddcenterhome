@@ -4,18 +4,17 @@
     justify-content: center;
     align-items: flex-start;
     align-content: center;
-    margin-top: 48px;
-    margin-bottom: 48px;
 }
 
 .spider{
     margin: 0.5em;
     padding: 0.3em;
     width: 8vw;
-    /* height: 100px; */
+    height: 100px;
     overflow: hidden;
     transition: width 0.5s,height 0.5s,transform 0.5s;
     animation: show 1s,darken 2s;
+    align-self: center;
 }
 .spider h4{
     animation: show 0.3s,darken 1s,dark 2s;

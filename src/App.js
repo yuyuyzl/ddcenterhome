@@ -51,7 +51,7 @@ class Hero extends React.Component {
                     </div>
                 </div>
                 <div className="heroBackground">
-                    <VMoeLogs style={{height:"calc(50vh - 96px)"}}/>
+                    <VMoeLogs style={{height:"50vh"}}/>
                     <VMoeMacro style={{height:"50vh"}}/>
                 </div>
             </div>
