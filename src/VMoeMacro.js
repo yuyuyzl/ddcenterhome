@@ -1,5 +1,5 @@
 import React from "react";
-import io from "socket.io-client";
+import socket from "./socket";
 import "./VMoeMacro.css";
 import pako from "pako";
 import ReactEcharts from "echarts-for-react";
@@ -27,12 +27,12 @@ Date.prototype.Format = function(fmt)
 class VMoeMacro extends React.Component {
     constructor(...args){
         super(...args);
-        this.socket=io("http://api.vtbs.moe");
+        this.socket=socket;
         this.state={};
     }
 
     componentDidMount() {
-        this.socket.connect();
+        // this.socket.connect();
         const getWeekData=()=> {
             this.socket.emit('vtbMacroWeekCompressed', undefined, (data) => {
                 data = JSON.parse(new TextDecoder().decode(pako.inflate(data))).value;
@@ -155,7 +155,7 @@ class VMoeMacro extends React.Component {
     }
 
     componentWillUnmount() {
-        this.socket.disconnect();
+        // this.socket.disconnect();
     }
 
     render() {
