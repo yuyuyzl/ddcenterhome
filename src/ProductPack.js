@@ -6,7 +6,9 @@ import './ProductPack.css';
 const ScrollOverPack = ScrollAnim.OverPack;
 
 function ProductPack(props) {
-    const content=props.content.split("\n").map((item,i)=><TweenOne className="content" animation={{delay:150*(i+1),opacity: 1 ,x: 0}} key={i}><p>{item}</p></TweenOne>);
+    const content=typeof props.content ==="string"?
+        (props.content.split("\n").map((item,i)=><TweenOne className="content" animation={{delay:150*(i+1),opacity: 1 ,x: 0}} key={i}><p>{item}</p></TweenOne>)):
+        props.content.map((obj,i)=><TweenOne className="content" animation={{delay:150*(i+1),opacity: 1 ,x: 0}} key={i}>{obj}</TweenOne>);
     return (<ScrollOverPack
         id={props.id}
         className="product-page"

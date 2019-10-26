@@ -3,6 +3,7 @@ import './App.css';
 import VMoeLogs from './VMoeLogs';
 import VMoeMacro from "./VMoeMacro";
 import ProductPack from "./ProductPack";
+import DDCProducts from "./DDCProducts";
 
 function App() {
     return (
