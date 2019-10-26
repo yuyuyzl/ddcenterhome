@@ -3,7 +3,6 @@ import socket from "./socket";
 import "./VMoeMacro.css";
 import pako from "pako";
 import ReactEcharts from "echarts-for-react";
-import echarts from 'echarts';
 
 Date.prototype.Format = function(fmt)
 { //author: meizz

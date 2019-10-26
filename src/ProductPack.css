@@ -1,0 +1,38 @@
+.product-page{
+    max-width: 1024px;
+    padding: 0 15px 0 15px;
+    margin: 96px auto;
+}
+.product-page .title {
+    opacity: 0;
+    transform: translateX(-20px);
+    color: #000;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+.product-page .author{
+    color: #888;
+    padding-left: 16px;
+    font-size: 12px;
+}
+.product-page .more{
+    color: #888;
+    padding-left: 16px;
+    font-size: 1rem;
+    text-decoration: none;
+    float:right;
+}
+.product-page .title::before{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 48px;
+    margin-left: 1px;
+    background: #2d6aa2;
+}
+.product-page .content{
+    color: #000;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateX(-20px);
+}

@@ -41,7 +41,18 @@ main{
   position: relative;
   z-index: 1;
   background: #FFF;
-  height: 100vh;
+  padding: 1px 0;
+}
+footer{
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #20232a;
+  color: #6b6d76;
+  position: relative;
+  width: 100%;
+  z-index: 10;
 }
 .heroCenter{
   position: absolute;

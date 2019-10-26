@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import VMoeLogs from './VMoeLogs';
 import VMoeMacro from "./VMoeMacro";
+import ProductPack from "./ProductPack";
 
 function App() {
     return (
