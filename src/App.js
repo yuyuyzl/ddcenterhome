@@ -10,6 +10,20 @@ function App() {
         <div className="App">
             <Nav/>
             <Hero/>
+            <main>
+                {DDCProducts.productLargePanel.filter(item=>!!item.name).map((item,i)=>
+                    <ProductPack
+                        key={i}
+                        title={item.name}
+                        content={item.content}
+                        author={item.author}
+                        link={item.link}
+                        quote={item.quote}
+                    />
+                )}
+
+            </main>
+            <footer> 2019 - Github DD Center  </footer>
         </div>
     );
 }
