@@ -8,8 +8,29 @@
     transform: translateX(-20px);
     color: #000;
     font-size: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 }
+.product-page .quote {
+    border-left: 1px solid #aaa;
+    opacity: 0;
+    transform: translateX(-20px);
+    color: #888;
+    font-size: 14px;
+    margin: 0 1px 16px;
+    padding-left: 16px;
+    position: relative;
+}
+.product-page .quote p{
+margin-top: 0.3em;
+margin-bottom: 0.3em;
+}
+.product-page .quote p:first-child{
+margin-top: 0;
+}
+.product-page .quote p:last-child{
+margin-bottom: 0;
+}
+
 .product-page .author{
     color: #888;
     padding-left: 16px;
@@ -22,14 +43,15 @@
     text-decoration: none;
     float:right;
 }
-.product-page .title::before{
+/*
+.product-page .title::after{
     content: "";
     display: block;
-    height: 4px;
-    width: 48px;
-    margin-left: 1px;
-    background: #2d6aa2;
-}
+    height: 2px;
+    width: 70%;
+    margin-top: 8px;
+    background: #d9d9d9;
+}*/
 .product-page .content{
     color: #000;
     line-height: 1.5;
