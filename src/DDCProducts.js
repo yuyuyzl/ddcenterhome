@@ -1,5 +1,6 @@
 import React from 'react';
 export default {
+    // vtbs.moe和bilichat不需要在这里出现，会单独做成大板块。
     productLargePanel:[
         {
             name:"烤推机 - 推特翻译嵌字助手",
