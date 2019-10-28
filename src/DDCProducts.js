@@ -33,7 +33,7 @@ export default {
         },
         {
             name:"人工DD：基于Bert的VTuber直播虚拟弹幕生成",
-            author:"一代鬃狮、kinori//在线丢人 等",
+            author:"一代鬃狮、kinori 等",
             link:"https://www.bilibili.com/read/cv2837965",
             quote:"经过不懈的努力，模型酱终于能够以DD们的说话方式来向所有vtuber表达她的爱❤了",
             content:"利用神经网络对弹幕进行分析，可以将弹幕投影成768长度的向量。\n" +
@@ -94,6 +94,13 @@ export default {
             link:"https://www.bilibili.com/read/cv2294932",
             quote:"枯燥的对帧从未如此轻松。",
             content:"在Aegisub中添加将字幕行对齐到视频中的硬字幕的功能，适合视频势翻译组。",
+        },
+        {
+            name:"bili-dd-monitor - 跨平台的实时直播监控及多开播放器",
+            author:"kinori",
+            link:"https://github.com/dd-center/bili-dd-monitor/releases",
+            quote:"",
+            content:"使用electron构建的支持windows,linux,osx三个平台的直播监控室，支持上下播提醒，定制自己的DD列表，并且可以根据vdb数据更新最新的主播名单，免去一个个查找添加的麻烦。",
         },
         {
             name:"",
