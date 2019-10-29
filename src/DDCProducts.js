@@ -32,12 +32,11 @@ export default {
             content:"此工具通过对过往VTuber直播弹幕进行数据挖掘，可以高效地寻找出发送恶意弹幕者的UID，以备封禁。",
         },
         {
-            name:"人工DD：基于Bert的VTuber直播虚拟弹幕生成",
+            name:"人工DD：VTuber直播虚拟弹幕生成",
             author:"一代鬃狮、kinori//在线丢人 等",
-            link:"https://www.bilibili.com/read/cv2837965",
+            link:"https://pan.baidu.com/s/18Pkr_VAEnXuME-NMG7HMdQ",
             quote:"经过不懈的努力，模型酱终于能够以DD们的说话方式来向所有vtuber表达她的爱❤了",
-            content:"利用神经网络对弹幕进行分析，可以将弹幕投影成768长度的向量。\n" +
-                "根据已有的弹幕，此模型会生成相同语义的弹幕，以达到炒热气氛的目的。",
+            content:"利用神经网络对弹幕进行分析，根据已有的弹幕，此模型会生成相同语义的弹幕，以达到炒热气氛的目的。",
         },
         {
             name:"VTuber粉丝预测",
