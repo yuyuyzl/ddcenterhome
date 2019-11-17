@@ -23,7 +23,7 @@ function ProductJumbotron(props) {
                             </div>
                         </a>
                     </div>
-                    <iframe className={"vmoe"} title={"vmoe"} src={"https://vtbs.moe"}/>
+                    <iframe className={"vmoe"} title={"vmoe"} src={"https://vtbs.moe/?noCache=true"}/>
                 </TweenOne>
             </ScrollOverPack>
             <ScrollOverPack playScale="96px" className={"product-page product-large"}>
