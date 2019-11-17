@@ -17,7 +17,7 @@ function ProductPack(props) {
     >
         <TweenOne className="title" key="-1" animation={{opacity: 1 ,x: 0}}>
             {props.title}
-            {props.author?<span className="author"> by {props.author}</span>:null}
+            {props.author?<span className="author"> By {props.author}</span>:null}
             {props.link?<a className="more" href={props.link} target="_blank" rel="noopener noreferrer">详情 >></a>:null}
         </TweenOne>
         {quoteLines?<TweenOne className="quote" key="-1" animation={{delay:150,opacity: 1 ,x: 0}}>

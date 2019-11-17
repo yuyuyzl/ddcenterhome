@@ -86,43 +86,43 @@ class VMoeMacro extends React.Component {
                 var option = {
                     title:{
                         text:"VTB宏观 - B站总人气",
-                        left:48,
-                        top:16,
-                        subtext: '数据源: vtbs.moe',
-                        textStyle: {
+                            left:48,
+                            top:16,
+                            subtext: '数据源: vtbs.moe',
+                            textStyle: {
                             color:"#FFF"
                         }
                     },
                     grid:{
                         left: "0",
-                        right:"0",
-                        top:32,
-                        bottom:60,
+                            right:"0",
+                            top:32,
+                            bottom:60,
                     },
                     tooltip: {
                         trigger: 'axis',
-                        axisPointer: {
+                            axisPointer: {
                             animation: false
                         }
                     },
                     legend: {
                         data: dataSplitted.map(data => data.name),
-                        orient: "vertical",
-                        left: 48,
-                        top: "middle",
-                        textStyle: {
+                            orient: "vertical",
+                            left: 48,
+                            top: "middle",
+                            textStyle: {
                             color: "#FFF"
                         }
                     },
                     yAxis: {
                         show:false,
-                        axisLine: {
+                            axisLine: {
                             lineStyle: {
                                 color: "#FFF"
                             }
                         },
                         type: 'value',
-                        splitLine: {
+                            splitLine: {
                             show: false
                         }
                     },
@@ -133,17 +133,17 @@ class VMoeMacro extends React.Component {
                             },
                         },
                         type: 'category',
-                        data: xaxdata,
-                        splitLine: {
+                            data: xaxdata,
+                            splitLine: {
                             show: false
                         },
                         axisLabel:{
                             showMaxLabel:false,
-                            showMinLabel: false
+                                showMinLabel: false
                         }
                     },
                     sort: "none",
-                    series: dataSplitted,
+                        series: dataSplitted,
                 };
                 this.setState({option: option});
                 console.log(option);

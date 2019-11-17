@@ -4,6 +4,7 @@ import VMoeLogs from './VMoeLogs';
 import VMoeMacro from "./VMoeMacro";
 import ProductPack from "./ProductPack";
 import DDCProducts from "./DDCProducts";
+import ProductJumbotron from "./ProductJumbotron";
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <Nav/>
             <Hero/>
             <main>
+                <ProductJumbotron/>
                 {DDCProducts.productLargePanel.filter(item=>!!item.name).map((item,i)=>
                     <ProductPack
                         key={i}
