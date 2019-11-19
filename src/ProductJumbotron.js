@@ -63,7 +63,7 @@ class AutoBiliChat extends React.Component{
     }
 
     render() {
-        return <iframe title={"bilichat"} src={this.state.roomid?"https://vtbs.moe/BiliChat/?pure=true&room="+this.state.roomid:"about:blank"}/>
+        return <iframe title={"bilichat"} src={this.state.roomid?"https://bilichat.3shain.com/gkd/"+this.state.roomid:"about:blank"}/>
     }
 }
 
