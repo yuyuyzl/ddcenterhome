@@ -26,6 +26,26 @@ function ProductJumbotron(props) {
                     <iframe className={"vmoe"} title={"vmoe"} src={"https://vtbs.moe/?noCache=true"}/>
                 </TweenOne>
             </ScrollOverPack>
+
+            <ScrollOverPack playScale="96px" className={"product-page product-large vmusic"}>
+                <TweenOne className={"h anim"} key="-1" animation={{delay:0,opacity: 1 ,y: 0}}>
+                    <h1>VTB-MUSIC 一个收录VTB歌回的网站</h1><span className={"author-center"}>By santiego、</span>
+                </TweenOne>
+                <TweenOne className={"h anim"} key="-1" animation={{delay:200,opacity: 1 ,y: 0}}>
+                    <p>收录vtb的歌回、原创单曲等，提供在线播放、下载服务</p>
+                </TweenOne>
+                <TweenOne className={"iframe anim"} key="-1" animation={{delay:600,opacity: 1 ,y: 0}}>
+                    <div className={"browser-title"}>
+                        <a href={"https://santiego.gitee.io/vtb-music/"} target="_blank" rel="noopener noreferrer">
+                            <div className={"browser-url"}>
+                            https://santiego.gitee.io/vtb-music/
+                            </div>
+                        </a>
+                    </div>
+                    <iframe className={"vmoe"} title={"vmoe"} src={"https://santiego.gitee.io/vtb-music/"}/>
+                </TweenOne>
+            </ScrollOverPack>
+
             <ScrollOverPack playScale="96px" className={"product-page product-large"}>
                 <TweenOne className={"anim"} key="-1" animation={{delay:0,opacity: 1 ,y: 0}}>
                     <h1>BiliChat</h1>
