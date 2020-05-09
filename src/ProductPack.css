@@ -122,3 +122,6 @@ margin-bottom: 0;
     opacity: 0;
     transform: translateX(-20px);
 }
+.vmusic{
+    max-width: 1057px;
+}
