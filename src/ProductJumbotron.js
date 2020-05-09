@@ -32,13 +32,13 @@ function ProductJumbotron(props) {
                     <h1>VTB-MUSIC 一个收录VTB歌回的网站</h1><span className={"author-center"}>By santiego、</span>
                 </TweenOne>
                 <TweenOne className={"h anim"} key="-1" animation={{delay:200,opacity: 1 ,y: 0}}>
-                    <p>收录vtb的歌回、原创单曲等，提供在线播放、下载服务</p>
+                    <p>收录vtb的歌回、原创单曲等，提供在线播放</p>
                 </TweenOne>
                 <TweenOne className={"iframe anim"} key="-1" animation={{delay:600,opacity: 1 ,y: 0}}>
                     <div className={"browser-title"}>
-                        <a href={"https://santiego.gitee.io/vtb-music/"} target="_blank" rel="noopener noreferrer">
+                        <a href={"https://vtbmusic.com"} target="_blank" rel="noopener noreferrer">
                             <div className={"browser-url"}>
-                            https://santiego.gitee.io/vtb-music/
+                            https://vtbmusic.com
                             </div>
                         </a>
                     </div>
